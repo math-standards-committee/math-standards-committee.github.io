@@ -1,0 +1,15 @@
+<footer class="text-center py-5">
+    <p>
+        {{ with .Site.Params.footer }}
+            {{ . }}
+        {{ else }}
+        © 2022<script type="text/javascript">var year = new Date(); if (year.getFullYear()>2022){document.write("-"+year.getFullYear())};</script>
+        <a href="https://mathstd.org" target="_blank">Math Standards Committee</a>.
+        {{ end }}
+    </p>
+</footer>
+
+{{ with .Site.Params.GoogleSearch }}
+<script async src="https://cse.google.com/cse.js?cx={{ . }}"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+{{ end }}
